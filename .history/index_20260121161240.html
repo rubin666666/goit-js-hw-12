@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
+    <header class="hero">
+      <div class="container">
+        <h1 class="page-title">Image Finder</h1>
+        <p class="page-subtitle">Search beautiful photos powered by Pixabay API</p>
+      </div>
+    </header>
+
     <main class="page">
       <section class="search-section">
         <div class="container">
@@ -24,18 +31,17 @@
         </div>
       </section>
 
-      <div class="loader-container is-hidden">
-        <p class="loader-text">Loading images, please wait...</p>
-      </div>
-
       <section class="gallery-section">
         <div class="container">
           <ul class="gallery"></ul>
-          <button class="load-more is-hidden" type="button">Load more</button>
+          <div class="controls">
+            <button class="load-more is-hidden" type="button">Load more</button>
+            <div class="loader is-hidden" aria-label="Loading"></div>
+          </div>
         </div>
       </section>
     </main>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
