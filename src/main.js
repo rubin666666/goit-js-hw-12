@@ -38,12 +38,9 @@ async function onSearch(event) {
     return;
   }
 
-  if (query !== currentQuery) {
-    page = 1;
-    clearGallery();
-  }
-
   currentQuery = query;
+  page = 1;
+  clearGallery();
   hideLoadMoreButton();
   await fetchImages();
   event.target.reset();
