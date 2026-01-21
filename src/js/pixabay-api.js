@@ -1,11 +1,9 @@
-import axios from 'axios';
-
 const API_KEY = '54194884-754619580cd53ed01628e79b9';
 export const PER_PAGE = 15;
 
 export async function getImagesByQuery(query, page = 1) {
 	try {
-		const response = await axios.get('https://pixabay.com/api/', {
+		const response = await window.axios.get('https://pixabay.com/api/', {
 			params: {
 				key: API_KEY,
 				q: query,
