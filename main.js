@@ -9,6 +9,7 @@ import {
   disableLoadMoreButton,
   enableLoadMoreButton,
 } from './src/js/render-functions.js';
+import './src/css/styles.css';
 
 // Dynamic iziToast loading for GitHub Pages compatibility
 let iziToast;
