@@ -1,4 +1,4 @@
-import { getImagesByQuery, PER_PAGE } from './src/js/pixabay-api.js';
+import { getImagesByQuery, PER_PAGE } from './js/pixabay-api.js';
 import {
   createGallery,
   clearGallery,
@@ -8,8 +8,8 @@ import {
   hideLoadMoreButton,
   disableLoadMoreButton,
   enableLoadMoreButton,
-} from './src/js/render-functions.js';
-import './src/css/styles.css';
+} from './js/render-functions.js';
+import './css/styles.css';
 
 const form = document.querySelector('.search-form');
 const loadMoreBtn = document.querySelector('.load-more');
