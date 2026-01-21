@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Finder</title>
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DvfmeZXB.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-D4uEwi1Z.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="search-section">
+        <div class="container">
+          <form class="search-form">
+            <input
+              class="search-input"
+              type="text"
+              name="query"
+              placeholder="Search images..."
+              autocomplete="off"
+              required
+            />
+            <button class="search-button" type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="loader-container is-hidden">
+        <p class="loader-text">Loading images, please wait...</p>
+      </div>
+
+      <section class="gallery-section">
+        <div class="container">
+          <ul class="gallery"></ul>
+          <button class="load-more is-hidden" type="button">Load more</button>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
