@@ -10,10 +10,21 @@ import {
   enableLoadMoreButton,
 } from './src/js/render-functions.js';
 
-// Ensure iziToast is available
-if (!window.iziToast) {
-  console.error('iziToast not loaded');
-}
+// Dynamic iziToast loading for GitHub Pages compatibility
+let iziToast;
+
+(async () => {
+  if (window.iziToast) {
+    iziToast = window.iziToast;
+  } else {
+    // Fallback: create a mock iziToast if not available
+    iziToast = {
+      error: (opts) => console.error(opts.message),
+      info: (opts) => console.log(opts.message),
+    };
+    console.warn('iziToast not available, using fallback');
+  }
+})();
 
 const form = document.querySelector('.search-form');
 const loadMoreBtn = document.querySelector('.load-more');
