@@ -10,6 +10,11 @@ import {
   enableLoadMoreButton,
 } from './src/js/render-functions.js';
 
+// Ensure iziToast is available
+if (!window.iziToast) {
+  console.error('iziToast not loaded');
+}
+
 const form = document.querySelector('.search-form');
 const loadMoreBtn = document.querySelector('.load-more');
 const gallery = document.querySelector('.gallery');
