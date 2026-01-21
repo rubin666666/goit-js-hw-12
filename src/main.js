@@ -11,7 +11,7 @@ import {
 } from './js/render-functions.js';
 import './css/styles.css';
 
-const form = document.querySelector('.search-form');
+const form = document.querySelector('.form');
 const loadMoreBtn = document.querySelector('.load-more');
 const gallery = document.querySelector('.gallery');
 
