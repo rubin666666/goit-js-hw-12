@@ -11,22 +11,6 @@ import {
 } from './src/js/render-functions.js';
 import './src/css/styles.css';
 
-// Dynamic iziToast loading for GitHub Pages compatibility
-let iziToast;
-
-(async () => {
-  if (window.iziToast) {
-    iziToast = window.iziToast;
-  } else {
-    // Fallback: create a mock iziToast if not available
-    iziToast = {
-      error: (opts) => console.error(opts.message),
-      info: (opts) => console.log(opts.message),
-    };
-    console.warn('iziToast not available, using fallback');
-  }
-})();
-
 const form = document.querySelector('.search-form');
 const loadMoreBtn = document.querySelector('.load-more');
 const gallery = document.querySelector('.gallery');
@@ -44,7 +28,7 @@ async function onSearch(event) {
   const query = event.target.elements.query.value.trim();
 
   if (!query) {
-    iziToast.error({
+    window.iziToast.error({
       message: 'Please enter a search query.',
       position: 'topRight',
       timeout: 2500,
@@ -75,7 +59,7 @@ async function fetchImages(isLoadMore = false) {
     totalHits = total;
 
     if (!hits.length) {
-      iziToast.error({
+      window.iziToast.error({
         message: 'Sorry, there are no images matching your search. Please try again!',
         position: 'topRight',
         timeout: 3000,
@@ -93,7 +77,7 @@ async function fetchImages(isLoadMore = false) {
       enableLoadMoreButton();
     } else {
       hideLoadMoreButton();
-      iziToast.info({
+      window.iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
         position: 'topRight',
         timeout: 3000,
@@ -104,7 +88,7 @@ async function fetchImages(isLoadMore = false) {
       smoothScroll();
     }
   } catch (error) {
-    iziToast.error({
+    window.iziToast.error({
       message: 'Something went wrong. Please try again later.',
       position: 'topRight',
       timeout: 3000,
