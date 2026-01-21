@@ -1,6 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-
 import { getImagesByQuery, PER_PAGE } from './src/js/pixabay-api.js';
 import {
   createGallery,
