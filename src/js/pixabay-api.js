@@ -18,7 +18,6 @@ export async function getImagesByQuery(query, page = 1) {
 		});
 		return response.data;
 	} catch (error) {
-		console.error('API Error:', error.response?.status, error.message);
 		throw error;
 	}
 }
