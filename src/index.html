@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Finder</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.1/dist/simple-lightbox.min.css" />
   </head>
   <body>
     <main class="page">
@@ -26,21 +24,16 @@
         </div>
       </section>
 
-      <div class="loader-container is-hidden">
-        <p class="loader-text">Loading images, please wait...</p>
-      </div>
-
       <section class="gallery-section">
         <div class="container">
           <ul class="gallery"></ul>
           <button class="load-more is-hidden" type="button">Load more</button>
+          <div class="loader-container is-hidden">
+            <p class="loader-text">Loading images, please wait...</p>
+          </div>
         </div>
       </section>
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/izitoast.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.1/dist/simple-lightbox.min.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

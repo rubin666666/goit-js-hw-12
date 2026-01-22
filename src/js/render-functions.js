@@ -1,8 +1,10 @@
+import SimpleLightbox from 'simplelightbox';
+
 const gallery = document.querySelector('.gallery');
 const loaderContainer = document.querySelector('.loader-container');
 const loadMoreBtn = document.querySelector('.load-more');
 
-const lightbox = new window.SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
 	captionsData: 'alt',
 	captionDelay: 250,
 });
